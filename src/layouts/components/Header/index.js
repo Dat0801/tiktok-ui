@@ -12,6 +12,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -32,6 +34,21 @@ const MENU_ITEMS = [
             data: [
                 { type: 'language', code: 'en', title: 'English' },
                 { type: 'language', code: 'vi', title: 'Tiếng Việt' },
+                { type: 'language', code: 'ja', title: '日本語' },
+                { type: 'language', code: 'ko', title: '한국어' },
+                { type: 'language', code: 'zh', title: '中文' },
+                { type: 'language', code: 'ja', title: '日本語' },
+                { type: 'language', code: 'ko', title: '한국어' },
+                { type: 'language', code: 'zh', title: '中文' },
+                { type: 'language', code: 'ja', title: '日本語' },
+                { type: 'language', code: 'ko', title: '한국어' },
+                { type: 'language', code: 'zh', title: '中文' },
+                { type: 'language', code: 'ja', title: '日本語' },
+                { type: 'language', code: 'ko', title: '한국어' },
+                { type: 'language', code: 'zh', title: '中文' },
+                { type: 'language', code: 'ja', title: '日本語' },
+                { type: 'language', code: 'ko', title: '한국어' },
+                { type: 'language', code: 'zh', title: '中文' },
                 { type: 'language', code: 'ja', title: '日本語' },
                 { type: 'language', code: 'ko', title: '한국어' },
                 { type: 'language', code: 'zh', title: '中文' },
@@ -90,7 +107,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={config.routes.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
                 <Search />
 
